@@ -3,7 +3,7 @@ import java.util.Date;
 import java.util.List;
 
 public class Cat extends Domestic implements Observable {
-    public Cat(int id, int age, double weight, String color, String name, boolean isVaccinated) {
+    Cat(int id, int age, double weight, String color, String name, boolean isVaccinated) {
         super(id, age, weight, color, name, isVaccinated);
     }
 
@@ -30,7 +30,7 @@ public class Cat extends Domestic implements Observable {
         this.notifyObserver();
     }
 
-    public void unshorn() {
+    public void unsheared() {
         super.unsheared();
         System.out.println(new java.util.Date() + " " + getId() + " Meow!'Looks hairy'");
         this.notifyObserver();

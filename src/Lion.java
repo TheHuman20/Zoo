@@ -1,11 +1,8 @@
 import java.util.ArrayList;
 import java.util.List;
 
-/**
- * Created by osads on 20.06.2017.
- */
 public class Lion extends Wild implements Observable {
-    public Lion(int id, int age, double weight, String color, boolean isPredator) {
+    Lion(int id, int age, double weight, String color, boolean isPredator) {
         super(id, age, weight, color,isPredator);
     }
 
@@ -16,20 +13,13 @@ public class Lion extends Wild implements Observable {
     @Override
     public void sick() {
         super.sick();
-        System.out.println("Roar! Ro-khe-khe...");
-
-    }
-    private List<Observer> observers = new ArrayList<>();
-
-    @Override
-    public void addObserver(Observer observer) {
-        observers.add(observer);
+        System.out.println(new java.util.Date() + " " + getId() + "'Dog look sick'");
+        this.notifyObserver();
     }
 
-    @Override
-    public void notifyObserver() {
-        for (Observer obsever : observers) {
-            obsever.handle(this);
-        }
+    public void hungry() {
+        super.hungry();
+        System.out.println(new java.util.Date() + " " + getId() + " Woof! 'Wolf looks hungry'");
+        this.notifyObserver();
     }
 }

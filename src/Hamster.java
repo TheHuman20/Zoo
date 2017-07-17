@@ -1,11 +1,27 @@
-/**
- * Created by osads on 20.06.2017.
- */
-public class Hamster extends Wild {
-    public Hamster(int id, int age, double weight, String color, boolean isPredator) {
-        super(id, age, weight, color, isPredator);
+
+public class Hamster extends Domestic {
+    Hamster(int id, int age, double weight, String color, String name, boolean isVaccinated) {
+        super(id, age, weight, color, name, isVaccinated);
     }
 
     public Hamster() {
+    }
+
+    public void sick() {
+        super.sick();
+        System.out.println(new java.util.Date() + " " + getId() + " Hamster looks sick");
+        this.notifyObserver();
+    }
+
+    public void hungry() {
+        super.hungry();
+        System.out.println(new java.util.Date() + " " + getId() + " Hamster looks hungry");
+        this.notifyObserver();
+    }
+
+    public void unsheared() {
+        super.unsheared();
+        System.out.println(new java.util.Date() + " " + getId() + " Hamster looks hairy");
+        this.notifyObserver();
     }
 }

@@ -1,9 +1,6 @@
-/**
- * Created by osads on 20.06.2017.
- */
-public class Fish extends Domestic {
-    public Fish(int id, int age, double weight, String color, String name, boolean isVaccinated) {
-        super(id, age, weight, color, name, isVaccinated);
+public class Fish extends Wild {
+    Fish(int id, int age, double weight, String color, String name, boolean isPredator) {
+        super(id, age, weight, color, isPredator);
     }
 
     public Fish() {
@@ -12,5 +9,17 @@ public class Fish extends Domestic {
     @Override
     public String phrase() {
         return "...";
+    }
+
+    public void sick() {
+        super.sick();
+        System.out.println(new java.util.Date() + " " + getId() + " Fish surfaced belly");
+        this.notifyObserver();
+    }
+
+    public void hungry() {
+        super.hungry();
+        System.out.println(new java.util.Date() + " " + getId() + " Fish looks hungry");
+        this.notifyObserver();
     }
 }
