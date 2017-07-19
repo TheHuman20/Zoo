@@ -26,20 +26,20 @@ public class Main {
         Crocodile crocodile = new Crocodile(8, 10, 100, "Green", true);
         zoo.add(crocodile);
 
+        Director director = new Director();
         Doctor doctor = new Doctor();
         Feeder feeder = new Feeder();
         HairDresser hairDresser = new HairDresser();
         Feeder feeder2 = new Feeder();
-        Director director = new Director();
 
 
         ListIterator<Animal> zooIterator = zoo.listIterator();
 
         while(zooIterator.hasNext()){
             Animal animal = zooIterator.next();
+            animal.addObserver(director);
             animal.addObserver(doctor);
             animal.addObserver(feeder);
-            animal.addObserver(director);
             if (animal instanceof Domestic) {
                 animal.addObserver(hairDresser);
             }
@@ -52,13 +52,13 @@ public class Main {
         cat.unsheared();
         System.out.println("");
 
-        if(zoo.size()>3)
+        if(zoo.size()>7)  //magic number, only for test
             {
                 while(zooIterator.hasNext()){
                 Animal animal = zooIterator.next();
                 animal.getObservers().clear();
-                animal.addObserver(doctor);
                 animal.addObserver(director);
+                animal.addObserver(doctor);
 
                 if (animal instanceof Domestic)
                 {
