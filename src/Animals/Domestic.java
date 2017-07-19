@@ -1,5 +1,4 @@
-import java.util.ArrayList;
-import java.util.List;
+package Animals;
 
 /**
  * Created by osads on 20.06.2017.

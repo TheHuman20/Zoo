@@ -1,3 +1,5 @@
+package Animals;
+
 public class Feeder implements Observer {
 
         @Override

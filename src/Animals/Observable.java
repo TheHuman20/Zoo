@@ -1,3 +1,5 @@
+package Animals;
+
 /**
  * Created by osads on 14.07.2017.
  */

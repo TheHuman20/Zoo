@@ -1,6 +1,4 @@
-import java.util.ArrayList;
-import java.util.Date;
-import java.util.List;
+package Animals;
 
 public class Cat extends Domestic implements Observable {
     Cat(int id, int age, double weight, String color, String name, boolean isVaccinated) {

@@ -1,5 +1,4 @@
-import java.util.ArrayList;
-import java.util.List;
+package Animals;
 
 public class Dog extends Domestic{
     Dog(int id, int age, double weight, String color, String name, boolean isVaccinated) {
@@ -18,7 +17,7 @@ public class Dog extends Domestic{
 
     public void sick() {
         super.sick();
-        System.out.println(new java.util.Date() + " " + getId() + "'Dog look sick'");
+        System.out.println(new java.util.Date() + " " + getId() + "'Animals.Dog look sick'");
         this.notifyObserver();
     }
 

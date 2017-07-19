@@ -1,3 +1,5 @@
+package Animals;
+
 public class Doctor implements Observer {
 
     @Override

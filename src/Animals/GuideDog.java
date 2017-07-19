@@ -1,3 +1,5 @@
+package Animals;
+
 public class GuideDog extends Domestic {
     private boolean isTrained;
 
@@ -28,19 +30,19 @@ public class GuideDog extends Domestic {
 
     public void sick() {
         super.sick();
-        System.out.println(new java.util.Date() + " " + getId() + "'Guide Dog look sick'");
+        System.out.println(new java.util.Date() + " " + getId() + "'Guide Animals.Dog look sick'");
         this.notifyObserver();
     }
 
     public void hungry() {
         super.hungry();
-        System.out.println(new java.util.Date() + " " + getId() + " 'Guide Dog looks hungry'");
+        System.out.println(new java.util.Date() + " " + getId() + " 'Guide Animals.Dog looks hungry'");
         this.notifyObserver();
     }
 
     public void unsheared() {
         super.unsheared();
-        System.out.println(new java.util.Date() + " " + getId() + " 'Guide Dog looks hairy'");
+        System.out.println(new java.util.Date() + " " + getId() + " 'Guide Animals.Dog looks hairy'");
         this.notifyObserver();
     }
 }

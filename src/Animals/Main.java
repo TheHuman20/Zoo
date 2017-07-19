@@ -1,6 +1,5 @@
-import com.sun.org.apache.bcel.internal.generic.ARRAYLENGTH;
+package Animals;
 
-import javax.print.Doc;
 import java.util.ArrayList;
 import java.util.ListIterator;
 
@@ -75,8 +74,8 @@ public class Main {
     }
 
 
-//        for(Animal animal: zoo){
-//            Animal an = (Domestic)animal;
+//        for(Animals.Animal animal: zoo){
+//            Animals.Animal an = (Animals.Domestic)animal;
 //
 //            };
     }

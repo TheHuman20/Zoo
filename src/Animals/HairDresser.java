@@ -1,3 +1,4 @@
+package Animals;
 
 public class HairDresser implements Observer {
 
