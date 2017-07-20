@@ -1,21 +1,18 @@
 package Animals;
 
-/**
- * Created by osads on 20.06.2017.
- */
 public class Domestic extends Animal{
     private String name;
     private boolean isVaccinated;
-    private boolean isSheared;
+    private boolean isSheared = true;
 
 
-    public Domestic(int id, int age, double weight, String color, String name, boolean isVaccinated) {
+    Domestic(int id, int age, double weight, String color, String name, boolean isVaccinated) {
         super(id, age, weight, color);
         this.name = name;
         this.isVaccinated = isVaccinated;
     }
 
-    public Domestic(){
+    Domestic(){
     }
 
 
@@ -55,7 +52,7 @@ public class Domestic extends Animal{
         isSheared = sheared;
     }
 
-    public void sheared(){
+    void sheared(){
         isSheared = true;
     }
 

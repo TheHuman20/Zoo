@@ -12,15 +12,15 @@ public class Main {
         zoo.add(cat);
         Dog dog = new Dog(3, 7, 16, "Black", "Leonard", true);
         zoo.add(dog);
-        Lion lion = new Lion(2,10,90,"Yellow",true);
+        Lion lion = new Lion(2, 10, 90, "Yellow", true);
         zoo.add(lion);
-        Fish fish = new Fish(4,3,0.2,"Gold","Unnamed",false);
+        Fish fish = new Fish(4, 3, 0.2, "Gold", "Unnamed", false);
         zoo.add(fish);
-        GuideDog cleverDog = new GuideDog(5,10,10,"White","Cooper",true,true);
+        GuideDog cleverDog = new GuideDog(5, 10, 10, "White", "Cooper", true, true);
         zoo.add(cleverDog);
-        Hamster hamster = new Hamster(6,1,0.1,"Red", "Humsy", true);
+        Hamster hamster = new Hamster(6, 1, 0.1, "Red", "Humsy", true);
         zoo.add(hamster);
-        Giraffe giraffe = new Giraffe(7,33,36,"Spock",false);
+        Giraffe giraffe = new Giraffe(7, 33, 36, "Spock", false);
         zoo.add(giraffe);
         Crocodile crocodile = new Crocodile(8, 10, 100, "Green", true);
         zoo.add(crocodile);
@@ -34,7 +34,7 @@ public class Main {
 
         ListIterator<Animal> zooIterator = zoo.listIterator();
 
-        while(zooIterator.hasNext()){
+        while (zooIterator.hasNext()) {
             Animal animal = zooIterator.next();
             animal.addObserver(director);
             animal.addObserver(doctor);
@@ -51,25 +51,24 @@ public class Main {
         cat.unsheared();
         System.out.println("");
 
-        if(zoo.size()>7)  //magic number, only for test
-            {
-                while(zooIterator.hasNext()){
+        if (zoo.size() > 7)  //magic number, only for test
+        {
+            while (zooIterator.hasNext()) {
                 Animal animal = zooIterator.next();
                 animal.getObservers().clear();
                 animal.addObserver(director);
                 animal.addObserver(doctor);
 
-                if (animal instanceof Domestic)
-                {
-                animal.addObserver(hairDresser);
-                animal.addObserver(feeder);
+                if (animal instanceof Domestic) {
+                    animal.addObserver(hairDresser);
+                    animal.addObserver(feeder);
                 }
 
                 if (animal instanceof Wild)
-                animal.addObserver(feeder2);
+                    animal.addObserver(feeder2);
+            }
+            System.out.println("Animals are regrouped for two feeders.");
         }
-        System.out.println("Animals are regrouped for two feeders.");
-    }
 
     }
 
@@ -78,4 +77,4 @@ public class Main {
 //            Animals.Animal an = (Animals.Domestic)animal;
 //
 //            };
-    }
+}
