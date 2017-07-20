@@ -52,7 +52,7 @@ public class Domestic extends Animal{
         isSheared = sheared;
     }
 
-    void sheared(){
+    public void sheared(){
         isSheared = true;
     }
 

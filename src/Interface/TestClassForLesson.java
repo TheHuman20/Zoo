@@ -1,17 +1,26 @@
 package Interface;
 
+import java.util.HashMap;
+import java.util.Map;
+import java.util.Set;
+import java.util.TreeSet;
+
 /**
  * Created by osads on 19.07.2017.
  */
 public class TestClassForLesson {
 
     public static void main(String[] args){
-        Pair<String, Integer> p1 = new Pair<>("123", 234);
-        Pair<String, Integer> p2 = new Pair<>("456", 567);
+        Set<String> set = new TreeSet<>();
+        set.add("Hello");
+        set.add("Guys");
 
-        System.out.println(p1.getSecond());
+        System.out.println(set.iterator().next().length());
 
-        System.out.println(p2.getSecond() - p1.getSecond());
+
+        Map<String, Integer> stringToInteger= new HashMap<>();
+
+
+
     }
-
 }
